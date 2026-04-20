@@ -58,7 +58,6 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 COPY --from=builder /app/dist /usr/share/nginx/html/
 COPY --from=builder /app/env.json /usr/share/nginx/html
-COPY --from=builder /app/google862eca84e8b12823.html /usr/share/nginx/html/
 COPY --from=builder /app/generate-env.sh .
 COPY --from=builder /app/nginx/app.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/nginx/nginx.conf /etc/nginx/nginx.conf
